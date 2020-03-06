@@ -33,6 +33,7 @@ module.exports = {
     ],
     'import/prefer-default-export': 'off',
     "react/static-property-placement": 0,
+    "no-param-reassign": 'off',
     'no-console': ["error", { allow: ["tron"]}]
   },
 };
