@@ -10,7 +10,7 @@ import {
 
 import { Container, ProductTable, Total } from './styles';
 
-function Cart({ cart }) {
+function Cart({ cart, dispatch }) {
   return (
     <Container>
       <ProductTable>
@@ -50,7 +50,14 @@ function Cart({ cart }) {
                 <strong>R$258,80</strong>
               </td>
               <td>
-                <MdDelete size={20} color="orange" />
+                <MdDelete
+                  size={20}
+                  cursor="pointer"
+                  color="orange"
+                  onClick={() =>
+                    dispatch({ type: 'REMOVE_FROM_CART', id: product.id })
+                  }
+                />
               </td>
             </tr>
           ))}
